@@ -268,10 +268,10 @@ class TemperatureReadingMessage(Message):
   sensor_reading = TempField(0x02)
 
 
-class CoinSelectorMessage(Message):
+class CoinInsertedMessage(Message):
   MESSAGE_ID = 0x15
   selector_name = StringField(0x01)
-  selector_reading = StringField(0x02)
+  ticks = Uint32Field(0x02)
 
 
 class OutputStatusMessage(Message):
