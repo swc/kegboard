@@ -262,6 +262,18 @@ class TemperatureReadingMessage(Message):
   sensor_reading = TempField(0x02)
 
 
+class TemperatureReadingMessage(Message):
+  MESSAGE_ID = 0x11
+  sensor_name = StringField(0x01)
+  sensor_reading = TempField(0x02)
+
+
+class CoinSelectorMessage(Message):
+  MESSAGE_ID = 0x15
+  selector_name = StringField(0x01)
+  selector_reading = StringField(0x02)
+
+
 class OutputStatusMessage(Message):
   MESSAGE_ID = 0x12
   output_name = StringField(0x01)
